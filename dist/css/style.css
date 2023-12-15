@@ -1083,6 +1083,7 @@ button {
 }
 
 .info__body {
+  position: relative;
   margin: 60px 0 70px;
 }
 
@@ -2215,6 +2216,112 @@ button {
   margin-bottom: 50px;
 }
 
+.tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip__item {
+  position: absolute;
+}
+
+.tooltip__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(96, 88, 206, 0.5);
+  position: relative;
+}
+
+.tooltip__btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -13px;
+  margin-top: -13px;
+  background-color: rgb(96, 88, 206);
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.tooltip__btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.tooltip__btn._active,
+.tooltip__btn:hover,
+.tooltip__item:hover .tooltip__btn {
+  z-index: 2;
+}
+
+.tooltip__item._active .tooltip__btn,
+.tooltip__item:hover .tooltip__btn {
+  background-color: rgba(10, 207, 151, 0.5);
+}
+
+.tooltip__item:hover .tooltip__btn::before {
+  background-color: rgb(10, 207, 151);
+}
+
+.tooltip__body {
+  position: relative;
+  z-index: 1;
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 218px;
+  border-radius: 16px;
+  background: #6564DF;
+  position: absolute;
+  left: 20px;
+  top: -45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.tooltip__item._open-right .tooltip__body {
+  left: auto;
+  right: 20px;
+}
+
+.tooltip__item:hover .tooltip__body {
+  width: 320px;
+  padding: 40px 60px 40px 40px;
+  visibility: visible;
+}
+
+.tooltip__body img {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  width: 130px;
+  height: 90px;
+}
+
+.tooltip__content {
+  min-width: 210px;
+  color: #FFF;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -2345,6 +2452,23 @@ button {
   .hero {
     margin-top: -125px;
     padding-top: 125px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .tooltip__body {
+    scale: 0.8;
+    left: -15px;
+    height: 200px;
+  }
+
+  .tooltip__item._open-right .tooltip__body {
+    left: auto;
+    right: -15px;
+  }
+
+  .tooltip__item:hover .tooltip__body {
+    padding: 20px 30px;
   }
 }
 
