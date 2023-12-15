@@ -4048,8 +4048,12 @@
     document.addEventListener("DOMContentLoaded", (function() {
         var toggler = document.querySelector(".tariffs__toggler-center");
         var wrappers = document.querySelectorAll(".tariffs__wrapper");
+        var togglerLeft = document.querySelector(".tariffs__toggler-left");
+        var togglerRight = document.querySelector(".tariffs__toggler-right");
         toggler.addEventListener("click", (function() {
             toggler.classList.toggle("_active");
+            togglerLeft.classList.toggle("_active");
+            togglerRight.classList.toggle("_active");
             wrappers.forEach((function(wrapper) {
                 wrapper.classList.toggle("_active");
             }));
