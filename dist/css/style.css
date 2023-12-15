@@ -872,7 +872,7 @@ button {
 }
 
 .no-webp .hero{
-  background: url("img/backgrounds/hero.png") center no-repeat; }
+  background: url("../img/backgrounds/hero.png") center no-repeat; }
 
 .hero {
   background-size: cover;
@@ -1879,10 +1879,10 @@ button {
 }
 
 .tariffs__item {
-  width: 199px;
+  width: 195px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 0 0 0 44px;
+  padding: 0 0 0 40px;
 }
 
 .tariffs__item-name {
@@ -2651,7 +2651,7 @@ button {
 
   .tariffs__item {
     width: 175px;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 19px;
   }
 
   .tariffs__item-name {
@@ -3481,7 +3481,7 @@ button {
 
 .webp .footer{ background: url(../img/backgrounds/footer.webp) center center no-repeat; }
 
-.webp .hero{ background: url(img/backgrounds/hero.webp) center no-repeat; }
+.webp .hero{ background: url(../img/backgrounds/hero.webp) center no-repeat; }
 
 .webp .solution{ background: url(../img/backgrounds/solution.webp) center center no-repeat; }
 
